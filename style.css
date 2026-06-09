@@ -1,0 +1,161 @@
+body {
+    background-color: #050a05;
+    color: #39ff14; /* Verde Neon */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efeito de monitor antigo */
+.scanline {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(57,255,20,0.2) 50%, rgba(0,0,0,0) 100%);
+    opacity: 0.1;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scanline {
+    0% { bottom: 100%; }
+    100% { bottom: -100px; }
+}
+
+.container {
+    background-color: #0a140a;
+    padding: 40px;
+    border: 2px solid #1a4d1a;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.1), inset 0 0 20px rgba(57, 255, 20, 0.05);
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+}
+
+.cabecalho-sistema {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1a4d1a;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+.badge {
+    background-color: #39ff14;
+    color: #050a05;
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+#status-text, .alerta {
+    font-size: 15px;
+    color: #8fbc8f;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo da pergunta de segurança em destaque branco */
+.pergunta-seguranca {
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+#temporizador {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ff3333; /* Vermelho perigo */
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+}
+
+#input-senha {
+    background-color: #050a05;
+    color: #39ff14;
+    border: 1px solid #39ff14;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+    outline: none;
+    text-transform: uppercase;
+}
+
+#input-senha:focus {
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+#erro-senha {
+    color: #ff3333;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+button {
+    background-color: rgba(57, 255, 20, 0.1);
+    color: #39ff14;
+    border: 1px solid #39ff14;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover:not(:disabled) {
+    background-color: #39ff14;
+    color: #050a05;
+    box-shadow: 0 0 15px #39ff14;
+}
+
+button:disabled {
+    color: #1a4d1a;
+    border-color: #1a4d1a;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+.oculto { display: none; }
+
+#caixa-dica {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #39ff14;
+    background-color: rgba(57, 255, 20, 0.05);
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.dica-header {
+    background-color: #39ff14;
+    color: #050a05;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin: -20px -20px 15px -20px;
+}

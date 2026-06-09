@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO VALENTINE // NÍVEL 03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="container">
+        <div class="cabecalho-sistema">
+            <h1>SISTEMA TÁTICO - NÍVEL 03</h1>
+            <span class="badge">TOP SECRET</span>
+        </div>
+        
+        <p id="status-text">> SISTEMA REQUER DESBLOQUEIO TEMPORAL PARA DICA 03...</p>
+        
+        <!-- Relógio -->
+        <div id="temporizador">00:00:00</div>
+        
+        <!-- Botão falso de espera -->
+        <button id="btn-espera" disabled>Aguardando Sincronização</button>
+        
+        <!-- Área de login / Pergunta de Segurança -->
+        <div id="area-senha" class="oculto">
+            <p class="alerta">> PROTOCOLO DE SEGURANÇA ATIVADO. RESPONDA PARA PROSSEGUIR:</p>
+            
+            <!-- COLOQUE A SUA PERGUNTA AQUI: -->
+            <p class="pergunta-seguranca">Qual o nome da comida que mais comemos quando vamos em um japa?</p>
+            
+            <!-- Mudei para type="text" para ela ver o que está digitando -->
+            <input type="text" id="input-senha" placeholder="DIGITE SUA RESPOSTA">
+            <br>
+            <button id="btn-validar">EXECUTAR DESBLOQUEIO</button>
+            <p id="erro-senha" class="oculto">ERRO: Resposta incorreta. Tente novamente.</p>
+        </div>
+        
+        <!-- A Dica 3 -->
+        <div id="caixa-dica" class="oculto">
+            <div class="dica-header">ACESSO CONCEDIDO: DICA 03</div>
+            <p>O terreno da nossa operação possui regras rigorosas. <strong>Nossos calçados de rua são terminantemente proibidos</strong> na zona principal de acesso.</p>
+            <p>Logo na base de controle, faremos uma troca tática: nossos tênis ficarão retidos e receberemos um <strong>equipamento padronizado da própria instalação</strong>. Ele é projetado para preservar o piso especial do local e garantir o nosso controle de movimento.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
