@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define o horário alvo (Ex: HOJE às 22:30:00)
     const alvo = new Date();
-    alvo.setHours(22, 30, 0, 0);
+    alvo.setHours(23, 55, 0, 0);
 
     const atualizarRelogio = setInterval(() => {
         const agora = new Date().getTime();
